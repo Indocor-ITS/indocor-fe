@@ -22,6 +22,9 @@ importers:
       "@fontsource/uncut-sans":
         specifier: ^5.2.5
         version: 5.2.5
+      "@supabase/supabase-js":
+        specifier: ^2.101.1
+        version: 2.101.1
       "@vercel/blob":
         specifier: ^2.3.3
         version: 2.3.3
@@ -31,9 +34,6 @@ importers:
       lucide-react:
         specifier: ^0.575.0
         version: 0.575.0(react@19.2.3)
-      mysql2:
-        specifier: ^3.19.0
-        version: 3.20.0(@types/node@20.19.37)
       next:
         specifier: ^16.2.2
         version: 16.2.2(@babel/core@7.29.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -732,6 +732,54 @@ packages:
         integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==,
       }
 
+  "@supabase/auth-js@2.101.1":
+    resolution:
+      {
+        integrity: sha512-Kd0Wey+RkFHgyVep7adS6UOE2pN6MJ3mZ32PAXSvfw6IjUkFRC7IQpdZZjUOcUe5pXr1ejufCRgF6lsGINe4Tw==,
+      }
+    engines: { node: ">=20.0.0" }
+
+  "@supabase/functions-js@2.101.1":
+    resolution:
+      {
+        integrity: sha512-OZWU7YtaG+NNNFZK8p/FuJ6gpq7pFyrG2fLOopP73HAIDHDGpOttPJapvO8ADu3RkqfQfkwrB354vPkSBbZ20A==,
+      }
+    engines: { node: ">=20.0.0" }
+
+  "@supabase/phoenix@0.4.0":
+    resolution:
+      {
+        integrity: sha512-RHSx8bHS02xwfHdAbX5Lpbo6PXbgyf7lTaXTlwtFDPwOIw64NnVRwFAXGojHhjtVYI+PEPNSWwkL90f4agN3bw==,
+      }
+
+  "@supabase/postgrest-js@2.101.1":
+    resolution:
+      {
+        integrity: sha512-UW1RajH5jbZoK+ldAJ1I6VZ+HWwZ2oaKjEQ6Gn+AQ67CHQVxGl8wNQoLYyumbyaExm41I+wn7arulcY1eHeZJw==,
+      }
+    engines: { node: ">=20.0.0" }
+
+  "@supabase/realtime-js@2.101.1":
+    resolution:
+      {
+        integrity: sha512-Oa6dno0OB9I+hv5do5zsZHbFu41ViZnE9IWjmkeeF/8fPmB5fWoHGqeTYEC3/0DAgtpUoFJa4FpvzFH0SBHo1Q==,
+      }
+    engines: { node: ">=20.0.0" }
+
+  "@supabase/storage-js@2.101.1":
+    resolution:
+      {
+        integrity: sha512-WhTaUOBgeEvnKLy95Cdlp6+D5igSF/65yC727w1olxbet5nzUvMlajKUWyzNtQu2efrz2cQ7FcdVBdQqgT9YKQ==,
+      }
+    engines: { node: ">=20.0.0" }
+
+  "@supabase/supabase-js@2.101.1":
+    resolution:
+      {
+        integrity: sha512-Jnhm3LfuACwjIzvk2pfUbGQn7pa7hi6MFzfSyPrRYWVCCu69RPLCFyHSBl7HSBwadbQ3UZOznnD3gPca3ePrRA==,
+      }
+    engines: { node: ">=20.0.0" }
+
   "@swc/helpers@0.5.15":
     resolution:
       {
@@ -917,6 +965,12 @@ packages:
     resolution:
       {
         integrity: sha512-ilcTH/UniCkMdtexkoCN0bI7pMcJDvmQFPvuPvmEaYA/NSfFTAgdUSLAoVjaRJm7+6PvcM+q1zYOwS4wTYMF9w==,
+      }
+
+  "@types/ws@8.18.1":
+    resolution:
+      {
+        integrity: sha512-ThVF6DCVhA8kUGy+aazFQ4kXQ7E1Ty7A3ypFOe0IcJV8O/M511G99AW24irKrW56Wt44yG9+ij8FaqoBGkuBXg==,
       }
 
   "@typescript-eslint/eslint-plugin@8.58.0":
@@ -1320,13 +1374,6 @@ packages:
       }
     engines: { node: ">= 0.4" }
 
-  aws-ssl-profiles@1.1.2:
-    resolution:
-      {
-        integrity: sha512-NZKeq9AfyQvEeNlN0zSYAaWrmBffJh3IELMZfRpJVWgrpEbtEpnjvzqBPf+mxoI287JohRDoa+/nsfqqiZmF6g==,
-      }
-    engines: { node: ">= 6.0.0" }
-
   axe-core@4.11.2:
     resolution:
       {
@@ -1571,13 +1618,6 @@ packages:
         integrity: sha512-8QmQKqEASLd5nx0U1B1okLElbUuuttJ/AnYmRXbbbGDWh6uS208EjD4Xqq/I9wK7u0v6O08XhTWnt5XtEbR6Dg==,
       }
     engines: { node: ">= 0.4" }
-
-  denque@2.1.0:
-    resolution:
-      {
-        integrity: sha512-HVQE3AAb/pxF8fQAoiqpvg9i3evqug3hoiwakOyZAwJm+6vZehbkYXZ0l4JxS+I3QxM97v5aaRNhj8v5oBhekw==,
-      }
-    engines: { node: ">=0.10" }
 
   detect-libc@2.1.2:
     resolution:
@@ -2011,12 +2051,6 @@ packages:
         integrity: sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==,
       }
 
-  generate-function@2.3.1:
-    resolution:
-      {
-        integrity: sha512-eeB5GfMNeevm/GRYq20ShmsaGcmI81kIX2K9XQx5miC8KdHaC6Jm0qQ8ZNeGOi7wYB8OsdxKs+Y2oVuTFuVwKQ==,
-      }
-
   generator-function@2.0.1:
     resolution:
       {
@@ -2181,12 +2215,12 @@ packages:
     engines: { node: ">=18" }
     hasBin: true
 
-  iconv-lite@0.7.2:
+  iceberg-js@0.8.1:
     resolution:
       {
-        integrity: sha512-im9DjEDQ55s9fL4EYzOAv0yMqmMBSZp6G0VvFyTMPKWxiSBHUj9NW/qqLmXUwXrrM7AvqSlTCfvqRb0cM8yYqw==,
+        integrity: sha512-1dhVQZXhcHje7798IVM+xoo/1ZdVfzOMIc8/rgVSijRK38EDqOJoGula9N/8ZI5RD8QTxNQtK/Gozpr+qUqRRA==,
       }
-    engines: { node: ">=0.10.0" }
+    engines: { node: ">=20.0.0" }
 
   ignore@5.3.2:
     resolution:
@@ -2360,12 +2394,6 @@ packages:
         integrity: sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==,
       }
     engines: { node: ">=0.12.0" }
-
-  is-property@1.0.2:
-    resolution:
-      {
-        integrity: sha512-Ks/IoX00TtClbGQr4TWXemAnktAQvYB7HzcCxDGqEZU6oCmb2INHuOoKxbtR+HFkmYWBKv/dOZtGRiAjDhj92g==,
-      }
 
   is-regex@1.2.1:
     resolution:
@@ -2688,12 +2716,6 @@ packages:
       }
     engines: { node: ">=18" }
 
-  long@5.3.2:
-    resolution:
-      {
-        integrity: sha512-mNAgZ1GmyNhD7AuqnTG3/VQ26o760+ZYBPKjPvugO8+nLbYfX6TVpJPseBvopbdY+qpZ/lKUnmEc1LeZYS3QAA==,
-      }
-
   loose-envify@1.4.0:
     resolution:
       {
@@ -2706,13 +2728,6 @@ packages:
       {
         integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==,
       }
-
-  lru.min@1.1.4:
-    resolution:
-      {
-        integrity: sha512-DqC6n3QQ77zdFpCMASA1a3Jlb64Hv2N2DciFGkO/4L9+q/IpIAuRlKOvCXabtRW6cQf8usbmM6BE/TOPysCdIA==,
-      }
-    engines: { bun: ">=1.0.0", deno: ">=1.30.0", node: ">=8.0.0" }
 
   lucide-react@0.575.0:
     resolution:
@@ -2792,22 +2807,6 @@ packages:
       {
         integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==,
       }
-
-  mysql2@3.20.0:
-    resolution:
-      {
-        integrity: sha512-eCLUs7BNbgA6nf/MZXsaBO1SfGs0LtLVrJD3WeWq+jPLDWkSufTD+aGMwykfUVPdZnblaUK1a8G/P63cl9FkKg==,
-      }
-    engines: { node: ">= 8.0" }
-    peerDependencies:
-      "@types/node": ">= 8"
-
-  named-placeholders@1.1.6:
-    resolution:
-      {
-        integrity: sha512-Tz09sEL2EEuv5fFowm419c1+a/jSMiBjI9gHxVLrVdbUkkNUUfjsVYs9pVZu5oCon/kmRh9TfLEObFtkVxmY0w==,
-      }
-    engines: { node: ">=8.0.0" }
 
   nanoid@3.3.11:
     resolution:
@@ -3171,12 +3170,6 @@ packages:
       }
     engines: { node: ">= 0.4" }
 
-  safer-buffer@2.1.2:
-    resolution:
-      {
-        integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==,
-      }
-
   scheduler@0.27.0:
     resolution:
       {
@@ -3295,13 +3288,6 @@ packages:
         integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==,
       }
     engines: { node: ">=0.10.0" }
-
-  sql-escaper@1.3.3:
-    resolution:
-      {
-        integrity: sha512-BsTCV265VpTp8tm1wyIm1xqQCS+Q9NHx2Sr+WcnUrgLrQ6yiDIvHYJV5gHxsj1lMBy2zm5twLaZao8Jd+S8JJw==,
-      }
-    engines: { bun: ">=1.0.0", deno: ">=2.0.0", node: ">=12.0.0" }
 
   stable-hash@0.0.5:
     resolution:
@@ -3634,6 +3620,21 @@ packages:
         integrity: sha512-42AtmgqjV+X1VpdOfyTGOYRi0/zsoLqtXQckTmqTeybT+BDIbM/Guxo7x3pE2vtpr1ok6xRqM9OpBe+Jyoqyww==,
       }
     engines: { node: ">=18" }
+
+  ws@8.20.0:
+    resolution:
+      {
+        integrity: sha512-sAt8BhgNbzCtgGbt2OxmpuryO63ZoDk/sqaB/znQm94T4fCEsy/yV+7CdC1kJhOU9lboAEU7R3kquuycDoibVA==,
+      }
+    engines: { node: ">=10.0.0" }
+    peerDependencies:
+      bufferutil: ^4.0.1
+      utf-8-validate: ">=5.0.2"
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
 
   yallist@3.1.1:
     resolution:
@@ -4026,6 +4027,46 @@ snapshots:
 
   "@rtsao/scc@1.1.0": {}
 
+  "@supabase/auth-js@2.101.1":
+    dependencies:
+      tslib: 2.8.1
+
+  "@supabase/functions-js@2.101.1":
+    dependencies:
+      tslib: 2.8.1
+
+  "@supabase/phoenix@0.4.0": {}
+
+  "@supabase/postgrest-js@2.101.1":
+    dependencies:
+      tslib: 2.8.1
+
+  "@supabase/realtime-js@2.101.1":
+    dependencies:
+      "@supabase/phoenix": 0.4.0
+      "@types/ws": 8.18.1
+      tslib: 2.8.1
+      ws: 8.20.0
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
+
+  "@supabase/storage-js@2.101.1":
+    dependencies:
+      iceberg-js: 0.8.1
+      tslib: 2.8.1
+
+  "@supabase/supabase-js@2.101.1":
+    dependencies:
+      "@supabase/auth-js": 2.101.1
+      "@supabase/functions-js": 2.101.1
+      "@supabase/postgrest-js": 2.101.1
+      "@supabase/realtime-js": 2.101.1
+      "@supabase/storage-js": 2.101.1
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
+
   "@swc/helpers@0.5.15":
     dependencies:
       tslib: 2.8.1
@@ -4121,6 +4162,10 @@ snapshots:
   "@types/react@19.2.14":
     dependencies:
       csstype: 3.2.3
+
+  "@types/ws@8.18.1":
+    dependencies:
+      "@types/node": 20.19.37
 
   "@typescript-eslint/eslint-plugin@8.58.0(@typescript-eslint/parser@8.58.0(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3)":
     dependencies:
@@ -4388,8 +4433,6 @@ snapshots:
     dependencies:
       possible-typed-array-names: 1.1.0
 
-  aws-ssl-profiles@1.1.2: {}
-
   axe-core@4.11.2: {}
 
   axobject-query@4.1.0: {}
@@ -4521,8 +4564,6 @@ snapshots:
       define-data-property: 1.1.4
       has-property-descriptors: 1.0.2
       object-keys: 1.1.1
-
-  denque@2.1.0: {}
 
   detect-libc@2.1.2: {}
 
@@ -4934,10 +4975,6 @@ snapshots:
 
   functions-have-names@1.2.3: {}
 
-  generate-function@2.3.1:
-    dependencies:
-      is-property: 1.0.2
-
   generator-function@2.0.1: {}
 
   gensync@1.0.0-beta.2: {}
@@ -5023,9 +5060,7 @@ snapshots:
 
   husky@9.1.7: {}
 
-  iconv-lite@0.7.2:
-    dependencies:
-      safer-buffer: 2.1.2
+  iceberg-js@0.8.1: {}
 
   ignore@5.3.2: {}
 
@@ -5124,8 +5159,6 @@ snapshots:
       has-tostringtag: 1.0.2
 
   is-number@7.0.0: {}
-
-  is-property@1.0.2: {}
 
   is-regex@1.2.1:
     dependencies:
@@ -5304,8 +5337,6 @@ snapshots:
       strip-ansi: 7.2.0
       wrap-ansi: 9.0.2
 
-  long@5.3.2: {}
-
   loose-envify@1.4.0:
     dependencies:
       js-tokens: 4.0.0
@@ -5313,8 +5344,6 @@ snapshots:
   lru-cache@5.1.1:
     dependencies:
       yallist: 3.1.1
-
-  lru.min@1.1.4: {}
 
   lucide-react@0.575.0(react@19.2.3):
     dependencies:
@@ -5352,22 +5381,6 @@ snapshots:
   motion-utils@12.36.0: {}
 
   ms@2.1.3: {}
-
-  mysql2@3.20.0(@types/node@20.19.37):
-    dependencies:
-      "@types/node": 20.19.37
-      aws-ssl-profiles: 1.1.2
-      denque: 2.1.0
-      generate-function: 2.3.1
-      iconv-lite: 0.7.2
-      long: 5.3.2
-      lru.min: 1.1.4
-      named-placeholders: 1.1.6
-      sql-escaper: 1.3.3
-
-  named-placeholders@1.1.6:
-    dependencies:
-      lru.min: 1.1.4
 
   nanoid@3.3.11: {}
 
@@ -5597,8 +5610,6 @@ snapshots:
       es-errors: 1.3.0
       is-regex: 1.2.1
 
-  safer-buffer@2.1.2: {}
-
   scheduler@0.27.0: {}
 
   semver@6.3.1: {}
@@ -5706,8 +5717,6 @@ snapshots:
       is-fullwidth-code-point: 5.1.0
 
   source-map-js@1.2.1: {}
-
-  sql-escaper@1.3.3: {}
 
   stable-hash@0.0.5: {}
 
@@ -5977,6 +5986,8 @@ snapshots:
       ansi-styles: 6.2.3
       string-width: 7.2.0
       strip-ansi: 7.2.0
+
+  ws@8.20.0: {}
 
   yallist@3.1.1: {}
 

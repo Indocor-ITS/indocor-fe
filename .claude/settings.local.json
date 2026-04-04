@@ -6,7 +6,8 @@
       "Bash(xargs grep:*)",
       "Bash(npm install:*)",
       "Bash(npm uninstall:*)",
-      "Bash(npx next:*)"
+      "Bash(npx next:*)",
+      "Bash(CI=true pnpm install:*)"
     ]
   }
 }
