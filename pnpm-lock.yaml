@@ -25,9 +25,6 @@ importers:
       "@supabase/supabase-js":
         specifier: ^2.101.1
         version: 2.101.1
-      "@vercel/blob":
-        specifier: ^2.3.3
-        version: 2.3.3
       framer-motion:
         specifier: ^12.34.3
         version: 12.38.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -1222,13 +1219,6 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  "@vercel/blob@2.3.3":
-    resolution:
-      {
-        integrity: sha512-MtD7VLo6hU07eHR7bmk5SIMD290q574UaNYTe46qeyRT+hWrCy26CoAqfd7PnIefVXvRehRZBzukxuTO9iGTVg==,
-      }
-    engines: { node: ">=20.0.0" }
-
   acorn-jsx@5.3.2:
     resolution:
       {
@@ -1360,12 +1350,6 @@ packages:
         integrity: sha512-hsU18Ae8CDTR6Kgu9DYf0EbCr/a5iGL0rytQDobUcdpYOKokk8LEjVphnXkDkgpi0wYVsqrXuP0bZxJaTqdgoA==,
       }
     engines: { node: ">= 0.4" }
-
-  async-retry@1.3.3:
-    resolution:
-      {
-        integrity: sha512-wfr/jstw9xNi/0teMHrRW7dsz3Lt5ARhYNZ2ewpadnhaIp5mbALhOAP+EAdsC7t4Z6wqsDVv9+W6gm1Dk9mEyw==,
-      }
 
   available-typed-arrays@1.0.7:
     resolution:
@@ -2285,13 +2269,6 @@ packages:
       }
     engines: { node: ">= 0.4" }
 
-  is-buffer@2.0.5:
-    resolution:
-      {
-        integrity: sha512-i2R6zNFDwgEHJyQUtJEk0XFi1i0dPFn/oqjK3/vPCcDeJvW5NQ83V8QbicfF1SupOaB0h8ntgBC2YiE7dfyctQ==,
-      }
-    engines: { node: ">=4" }
-
   is-bun-module@2.0.0:
     resolution:
       {
@@ -2374,12 +2351,6 @@ packages:
         integrity: sha512-5KoIu2Ngpyek75jXodFvnafB6DJgr3u8uuK0LEZJjrU19DrMD3EVERaR8sjz8CCGgpZvxPl9SuE1GMVPFHx1mw==,
       }
     engines: { node: ">= 0.4" }
-
-  is-node-process@1.2.0:
-    resolution:
-      {
-        integrity: sha512-Vg4o6/fqPxIjtxgUH5QLJhwZ7gW5diGCVlXpuUfELC62CuxM1iHcRe51f2W1FDy04Ai4KJkagKjx3XaqyfRKXw==,
-      }
 
   is-number-object@1.1.1:
     resolution:
@@ -3123,13 +3094,6 @@ packages:
       }
     engines: { node: ">=18" }
 
-  retry@0.13.1:
-    resolution:
-      {
-        integrity: sha512-XQBQ3I8W1Cge0Seh+6gjj03LbmRFWuoszgK9ooCpwYIrhhoO80pfq4cUkU5DkknwfOfFteRwlZ56PYOGYyFWdg==,
-      }
-    engines: { node: ">= 4" }
-
   reusify@1.1.0:
     resolution:
       {
@@ -3428,13 +3392,6 @@ packages:
       }
     engines: { node: ">=6" }
 
-  throttleit@2.1.0:
-    resolution:
-      {
-        integrity: sha512-nt6AMGKW1p/70DF/hGBdJB57B8Tspmbp5gfJ8ilhLnt7kkr2ye7hzD6NVG8GGErk2HWF34igrL2CXmNIkzKqKw==,
-      }
-    engines: { node: ">=18" }
-
   tinyexec@1.0.4:
     resolution:
       {
@@ -3542,13 +3499,6 @@ packages:
       {
         integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==,
       }
-
-  undici@6.24.1:
-    resolution:
-      {
-        integrity: sha512-sC+b0tB1whOCzbtlx20fx3WgCXwkW627p4EA9uM+/tNNPkSS+eSEld6pAs9nDv7WbY1UUljBMYPtu9BCOrCWKA==,
-      }
-    engines: { node: ">=18.17" }
 
   unrs-resolver@1.11.1:
     resolution:
@@ -4317,14 +4267,6 @@ snapshots:
   "@unrs/resolver-binding-win32-x64-msvc@1.11.1":
     optional: true
 
-  "@vercel/blob@2.3.3":
-    dependencies:
-      async-retry: 1.3.3
-      is-buffer: 2.0.5
-      is-node-process: 1.2.0
-      throttleit: 2.1.0
-      undici: 6.24.1
-
   acorn-jsx@5.3.2(acorn@8.16.0):
     dependencies:
       acorn: 8.16.0
@@ -4424,10 +4366,6 @@ snapshots:
   ast-types-flow@0.0.8: {}
 
   async-function@1.0.0: {}
-
-  async-retry@1.3.3:
-    dependencies:
-      retry: 0.13.1
 
   available-typed-arrays@1.0.7:
     dependencies:
@@ -5102,8 +5040,6 @@ snapshots:
       call-bound: 1.0.4
       has-tostringtag: 1.0.2
 
-  is-buffer@2.0.5: {}
-
   is-bun-module@2.0.0:
     dependencies:
       semver: 7.7.4
@@ -5150,8 +5086,6 @@ snapshots:
   is-map@2.0.3: {}
 
   is-negative-zero@2.0.3: {}
-
-  is-node-process@1.2.0: {}
 
   is-number-object@1.1.1:
     dependencies:
@@ -5581,8 +5515,6 @@ snapshots:
       onetime: 7.0.0
       signal-exit: 4.1.0
 
-  retry@0.13.1: {}
-
   reusify@1.1.0: {}
 
   rfdc@1.4.1: {}
@@ -5813,8 +5745,6 @@ snapshots:
 
   tapable@2.3.2: {}
 
-  throttleit@2.1.0: {}
-
   tinyexec@1.0.4: {}
 
   tinyglobby@0.2.15:
@@ -5897,8 +5827,6 @@ snapshots:
       which-boxed-primitive: 1.1.1
 
   undici-types@6.21.0: {}
-
-  undici@6.24.1: {}
 
   unrs-resolver@1.11.1:
     dependencies:
