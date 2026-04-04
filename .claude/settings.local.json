@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(\"C:/xampp/mysql/bin/mysql.exe\" -u root)"
+      "Bash(\"C:/xampp/mysql/bin/mysql.exe\" -u root)",
+      "Bash(cat /c/DIKA/PROGRAMMING_PROJECTS/indocor-2026/docker/mysql.conf.d/*)"
     ]
   }
 }
