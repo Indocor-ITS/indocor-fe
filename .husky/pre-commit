@@ -1,0 +1,64 @@
+#!/bin/bash
+
+# --- Configuration & Colors ---
+CYAN='\033[0;36m'
+GREEN='\033[0;32m'
+RED='\033[0;31m'
+YELLOW='\033[1;33m'
+NC='\033[0m' # No Color
+BOLD='\033[1m'
+
+show_stage() {
+  echo -e "\n${CYAN}${BOLD}==>${NC} ${BOLD}$1...${NC}"
+}
+
+# 1. Branch Protection
+branch="$(git rev-parse --abbrev-ref HEAD)"
+if [ "$branch" = "main" ] || [ "$branch" = "master" ]; then
+  echo -e "${RED}✘ Error:${NC} You are on the ${BOLD}$branch${NC} branch."
+  echo -e "${YELLOW}Pushing directly to production branches is prohibited.${NC}"
+  exit 1
+fi
+
+# 2. TypeScript Type Check
+show_stage "Type Checking (TypeScript)"
+if pnpm tsc --noEmit; then
+  echo -e "${GREEN}✔ Types are looking sharp!${NC}"
+else
+  echo -e "${RED}✘ TypeScript check failed.${NC} Please resolve the errors above."
+  exit 1
+fi
+
+# 3. Lint & Format (lint-staged)
+show_stage "Linting & Formatting Staged Files"
+if pnpm exec lint-staged; then
+  echo -e "${GREEN}✔ Code is clean and formatted.${NC}"
+else
+  echo -e "${RED}✘ Linting failed.${NC}"
+  exit 1
+fi
+
+echo -e "\n${GREEN}${BOLD}🚀 All checks passed! Ready to commit.${NC}\n"
+
+# ==============================================================================
+# SUMMARY: PRE-COMMIT REQUIREMENTS & CONFIGURATION
+# ==============================================================================
+# 1. BRANCH NAMES:
+#    - If your default branch is NOT 'main' or 'master' (e.g., 'prod'), 
+#      update the check in Section 1.
+#
+# 2. PACKAGE MANAGER:
+#    - This script uses 'pnpm'. If you switch to 'npm' or 'yarn', 
+#      replace 'pnpm tsc' and 'pnpm exec'.
+#
+# 3. TYPESCRIPT:
+#    - Ensure 'typescript' is installed and 'tsconfig.json' exists.
+#    - Use '--noEmit' to check types without generating build files.
+#
+# 4. LINT-STAGED CONFIG:
+#    - Ensure you have a '.lintstagedrc' or a 'lint-staged' key in 
+#      your package.json to define what happens to staged files.
+#
+# 5. PERMISSIONS:
+#    - Make this script executable: chmod +x .husky/pre-commit
+# ==============================================================================
