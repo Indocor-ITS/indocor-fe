@@ -1,0 +1,4 @@
+[mysqld]
+# MySQL 8.0 auto-generates self-signed SSL certs on first startup
+# in /var/lib/mysql — this just enforces that all connections use them.
+require_secure_transport = ON
