@@ -2,7 +2,12 @@
   "permissions": {
     "allow": [
       "Bash(\"C:/xampp/mysql/bin/mysql.exe\" -u root)",
-      "Bash(cat /c/DIKA/PROGRAMMING_PROJECTS/indocor-2026/docker/mysql.conf.d/*)"
+      "Bash(cat /c/DIKA/PROGRAMMING_PROJECTS/indocor-2026/docker/mysql.conf.d/*)",
+      "Bash(xargs grep:*)",
+      "Bash(npm install:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(npx next:*)",
+      "Bash(CI=true pnpm install:*)"
     ]
   }
 }
