@@ -15,10 +15,10 @@
     "@fontsource/playfair-display": "^5.2.8",
     "@fontsource/poppins": "^5.2.7",
     "@fontsource/uncut-sans": "^5.2.5",
+    "@supabase/supabase-js": "^2.101.1",
     "@vercel/blob": "^2.3.3",
     "framer-motion": "^12.34.3",
     "lucide-react": "^0.575.0",
-    "mysql2": "^3.19.0",
     "next": "^16.2.2",
     "react": "19.2.3",
     "react-dom": "19.2.3"
