@@ -103,6 +103,7 @@ export const EventSection = () => {
                         src={event.image}
                         alt={event.title}
                         fill
+                        sizes="100vw"
                         className="object-cover"
                       />
                       <div className="absolute inset-0 bg-black/20 mix-blend-multiply"></div>
