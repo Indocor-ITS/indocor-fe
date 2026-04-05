@@ -42,6 +42,7 @@ export const AboutPreview = () => {
               src="/images/landing-page/about1.jpeg"
               alt="INDOCOR ITS Activities 1"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
             />
           </div>
@@ -50,6 +51,7 @@ export const AboutPreview = () => {
               src="/images/landing-page/about2.png"
               alt="INDOCOR ITS Activities 2"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
             />
           </div>
