@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import { Analytics } from "@vercel/analytics/next";
 import "@fontsource/uncut-sans/400.css";
 import "@fontsource/uncut-sans/500.css";
 import "@fontsource/uncut-sans/600.css";
@@ -37,6 +39,8 @@ export default function RootLayout({
     <html lang="id">
       <body className="font-sans antialiased">
         {children}
+        <GoogleAnalytics gaId="G-4H45DRKXT5" />
+        <Analytics />
       </body>
     </html>
   );
