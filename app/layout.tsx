@@ -36,11 +36,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id">
+    <html lang="id" suppressHydrationWarning>
       <body className="font-sans antialiased">
         {children}
-        <GoogleAnalytics gaId="G-4H45DRKXT5" />
-        <Analytics />
       </body>
     </html>
   );
