@@ -92,7 +92,7 @@ export default function Navbar() {
               href="/register-iccp"
               className="bg-[#9D0808] hover:bg-red-800 text-white px-6 py-2.5 rounded-[20px] font-medium text-[15px] transition-all hover:scale-[1.02]"
             >
-              ICCP 2026
+              SCCP 2026
             </Link>
           </div>
 
@@ -133,7 +133,7 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
                 className="mt-4 w-full text-center bg-[#9D0808] hover:bg-red-800 text-white px-6 py-3 rounded-[20px] font-medium text-[15px] transition-colors"
               >
-                ICCP 2026
+                SCCP 2026
               </Link>
             </div>
           </motion.div>

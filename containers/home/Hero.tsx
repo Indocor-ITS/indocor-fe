@@ -46,7 +46,7 @@ export const Hero = () => {
             <div>
               <h3 className="text-xl font-bold mb-3">Popular Article</h3>
               <p className="text-sm leading-relaxed opacity-90 line-clamp-3">
-                Pengenalan dasar ICCP dan cara melindungi pipa, kapal, dan
+                Pengenalan dasar SCCP dan cara melindungi pipa, kapal, dan
                 struktur lepas pantai dari korosi.
               </p>
             </div>
