@@ -46,7 +46,7 @@ const navLinks = [
 ];
 
 const programLinks = [
-  { label: "Sertifikasi ICCP", href: "/register-iccp" },
+  { label: "Sertifikasi SCCP", href: "/register-iccp" },
   { label: "Blog & Artikel", href: "/artikel" },
   { label: "Coming Soon", href: "/coming-soon" },
 ];

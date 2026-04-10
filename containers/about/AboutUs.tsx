@@ -55,9 +55,9 @@ const indocorFeatures = [
 const itscPrograms = [
   {
     icon: GraduationCap,
-    title: "ICCP",
-    subtitle: "Indonesian Corrosion Certification Project",
-    desc: "Pelatihan dan sertifikasi korosi bagi mahasiswa, mempersiapkan mereka masuk ke dunia kerja profesional.",
+    title: "SCCP",
+    subtitle: "Student Corrosion Certification Program",
+    desc: "Sertifikasi kompetensi di bidang korosi yang ditujukan bagi mahasiswa dan fresh graduate, mencakup dasar-dasar metalurgi, material, hingga monitoring dan kontrol korosi.",
   },
   {
     icon: CalendarDays,
@@ -408,7 +408,7 @@ function ProgramSection() {
                   Bergabung dengan INDOCOR ITS SC
                 </p>
                 <p className="text-sm text-gray-500 mt-0.5">
-                  Ikuti program sertifikasi ICCP dan jadilah bagian dari
+                  Ikuti program sertifikasi SCCP dan jadilah bagian dari
                   komunitas korosi Indonesia.
                 </p>
               </div>
@@ -417,7 +417,7 @@ function ProgramSection() {
               href="/register-iccp"
               className="flex-shrink-0 bg-red hover:bg-red/90 text-white px-7 py-3 rounded-[20px] font-semibold text-sm transition-all hover:scale-[1.02] whitespace-nowrap"
             >
-              Daftar ICCP 2026
+              Daftar SCCP 2026
             </a>
           </div>
         </FadeIn>
@@ -440,7 +440,7 @@ function IntroSection() {
     },
     {
       label: "Aktivitas Utama",
-      desc: "ICCP (Indonesia Corrosion Certification Project) — sertifikasi mahasiswa. Company Visit — wawasan industri langsung. Corrosion Presentation Challenge — kompetisi ilmiah korosi.",
+      desc: "SCCP (Student Corrosion Certification Program) — sertifikasi mahasiswa dan fresh graduate. Company Visit — wawasan industri langsung. Corrosion Presentation Challenge — kompetisi ilmiah korosi.",
     },
   ];
 
@@ -466,10 +466,9 @@ function IntroSection() {
             </p>
             <p className="text-gray-600 leading-relaxed">
               Dibentuk untuk mendalami ilmu korosi, INDOCOR ITS SC aktif
-              menyelenggarakan kegiatan seperti Indonesia Corrosion
-              Certification Project (ICCP) dan kunjungan industri, guna
-              membekali mahasiswa dengan keterampilan praktis yang sesuai
-              kebutuhan industri.
+              menyelenggarakan kegiatan seperti Student Corrosion Certification
+              Program (SCCP) dan kunjungan industri, guna membekali mahasiswa
+              dengan keterampilan praktis yang sesuai kebutuhan industri.
             </p>
             <p className="text-gray-500 text-sm leading-relaxed mt-6 border-l-2 border-red pl-4 italic">
               INDOCOR ITS terus berupaya menjembatani pengetahuan akademis
