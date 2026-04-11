@@ -359,7 +359,7 @@ function ProgramSection() {
           </div>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-14">
             <h2 className="text-[clamp(2rem,4.5vw,3.2rem)] font-extrabold leading-tight tracking-tight text-black">
-              Apa yang Kami Lakukan
+              Program & Kegiatan INDOCOR ITS SC
             </h2>
             <p className="text-gray-500 text-sm max-w-sm leading-relaxed md:text-right">
               Dari sertifikasi hingga podcast — INDOCOR ITS SC hadir dengan
