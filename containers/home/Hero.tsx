@@ -40,7 +40,7 @@ export const Hero = () => {
           </Link>
 
           <Link
-            href="#"
+            href="/artikel"
             className="group flex flex-col justify-between rounded-xl bg-gray-900 p-6 sm:p-8 w-full sm:max-w-[320px] min-h-[220px] text-white transition-all hover:scale-[1.02] shadow-sm hover:shadow-md"
           >
             <div>
