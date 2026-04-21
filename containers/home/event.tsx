@@ -15,19 +15,19 @@ export const EventSection = () => {
       id: "01",
       title: "Company Visit",
       desc: "Rooftop and ground-mounted solar systems for homes, offices, and institutions.",
-      image: "/images/landing-page/background2.png",
+      image: "/images/landing-page/camvis.png",
     },
     {
       id: "02",
       title: "Bootcamp",
       desc: "Rooftop and ground-mounted solar systems for homes, offices, and institutions.",
-      image: "/images/landing-page/background2.png",
+      image: "/images/landing-page/bootcamphd.png",
     },
     {
       id: "03",
       title: "Guest Lecture",
       desc: "Rooftop and ground-mounted solar systems for homes, offices, and institutions.",
-      image: "/images/landing-page/background2.png",
+      image: "/images/landing-page/guestlecturehd.png",
     },
   ];
 
@@ -90,24 +90,33 @@ export const EventSection = () => {
                   <motion.div
                     key="content"
                     initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "400px", opacity: 1 }}
+                    animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
                     transition={{
-                      duration: 0.5,
+                      duration: 0.45,
                       ease: [0.04, 0.62, 0.23, 0.98],
                     }}
-                    className="w-full relative overflow-hidden"
+                    className="w-full overflow-hidden"
                   >
-                    <div className="absolute inset-0">
+                    {/* Mobile: zoomed fill */}
+                    <div className="relative h-[260px] md:hidden">
                       <Image
                         src={event.image}
                         alt={event.title}
                         fill
                         sizes="100vw"
-                        className="object-cover"
+                        className="object-cover object-center"
                       />
-                      <div className="absolute inset-0 bg-black/20 mix-blend-multiply"></div>
                     </div>
+                    {/* Desktop: natural size, no zoom */}
+                    <Image
+                      src={event.image}
+                      alt={event.title}
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      className="hidden md:block w-full h-auto"
+                    />
                   </motion.div>
                 )}
               </AnimatePresence>
