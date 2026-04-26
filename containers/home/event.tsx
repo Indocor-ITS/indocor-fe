@@ -99,7 +99,7 @@ export const EventSection = () => {
                     className="w-full overflow-hidden"
                   >
                     {/* Mobile: zoomed fill */}
-                    <div className="relative h-[260px] md:hidden">
+                    <div className="relative h-[160px] md:hidden">
                       <Image
                         src={event.image}
                         alt={event.title}
@@ -108,7 +108,6 @@ export const EventSection = () => {
                         className="object-cover object-center"
                       />
                     </div>
-                    {/* Desktop: natural size, no zoom */}
                     <Image
                       src={event.image}
                       alt={event.title}
