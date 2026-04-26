@@ -48,7 +48,7 @@ export const AboutPreview = () => {
           </div>
           <div className="absolute bottom-0 left-[20%] sm:left-1/4 lg:left-[40%] w-[60%] sm:w-[50%] lg:w-[60%] h-[70%] overflow-hidden shadow-2xl rounded-lg">
             <Image
-              src="/images/landing-page/about2.png"
+              src="/images/landing-page/about2.jpeg"
               alt="INDOCOR ITS Activities 2"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
