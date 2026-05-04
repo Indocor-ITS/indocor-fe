@@ -14,19 +14,19 @@ export const EventSection = () => {
     {
       id: "01",
       title: "Company Visit",
-      desc: "Rooftop and ground-mounted solar systems for homes, offices, and institutions.",
+      desc: "Kunjungan langsung ke fasilitas industri untuk melihat sistem proteksi dan inspeksi korosi, sekaligus berdiskusi dengan engineer profesional tentang penerapan teknik korosi di lapangan.",
       image: "/images/landing-page/camvis.png",
     },
     {
       id: "02",
       title: "Bootcamp",
-      desc: "Rooftop and ground-mounted solar systems for homes, offices, and institutions.",
+      desc: "Program intensif berbasis proyek yang membekali peserta dengan dasar-dasar material, korosi, dan praktik pengujian di laboratorium sebagai bekal awal menjadi engineer korosi.",
       image: "/images/landing-page/bootcamphd.png",
     },
     {
       id: "03",
       title: "Guest Lecture",
-      desc: "Rooftop and ground-mounted solar systems for homes, offices, and institutions.",
+      desc: "Sesi kuliah tamu bersama praktisi dan pakar industri yang membahas tren terbaru, studi kasus, dan peluang karier di bidang teknik korosi dan material.",
       image: "/images/landing-page/guestlecturehd.png",
     },
   ];

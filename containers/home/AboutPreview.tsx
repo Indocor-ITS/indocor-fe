@@ -37,7 +37,7 @@ export const AboutPreview = () => {
           delay={0.15}
           className="w-full lg:w-1/2 relative h-[350px] sm:h-[450px] lg:h-[500px] flex justify-center items-center mt-10 lg:mt-0"
         >
-          <div className="absolute top-0 right-1/4 sm:right-1/3 lg:right-[20%] w-[60%] sm:w-[50%] lg:w-[60%] h-[70%] overflow-hidden shadow-lg rounded-lg cursor-pointer transition-all duration-500 ease-out hover:translate-x-4 hover:scale-[1.04] hover:shadow-2xl hover:z-10">
+          <div className="absolute top-0 right-0 sm:right-1/4 lg:right-[20%] w-[65%] sm:w-[55%] lg:w-[60%] h-[60%] sm:h-[70%] overflow-hidden shadow-lg rounded-lg cursor-pointer transition-all duration-500 ease-out hover:translate-x-4 hover:scale-[1.04] hover:shadow-2xl hover:z-10">
             <Image
               src="/images/landing-page/about1.jpeg"
               alt="INDOCOR ITS Activities 1"
@@ -46,7 +46,7 @@ export const AboutPreview = () => {
               className="object-pointer object-cover transition-transform duration-500 ease-out hover:scale-105"
             />
           </div>
-          <div className="absolute bottom-0 left-[20%] sm:left-1/4 lg:left-[40%] w-[60%] sm:w-[50%] lg:w-[60%] h-[70%] overflow-hidden shadow-2xl rounded-lg cursor-pointer transition-all duration-500 ease-out hover:translate-x-4 hover:scale-[1.04] hover:shadow-[0_30px_60px_rgba(0,0,0,0.35)] hover:z-10">
+          <div className="absolute bottom-0 left-0 sm:left-1/4 lg:left-[40%] w-[65%] sm:w-[55%] lg:w-[60%] h-[60%] sm:h-[70%] overflow-hidden shadow-2xl rounded-lg cursor-pointer transition-all duration-500 ease-out hover:translate-x-4 hover:scale-[1.04] hover:shadow-[0_30px_60px_rgba(0,0,0,0.35)] hover:z-10">
             <Image
               src="/images/landing-page/about2.jpeg"
               alt="INDOCOR ITS Activities 2"
