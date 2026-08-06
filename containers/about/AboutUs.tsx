@@ -413,12 +413,12 @@ function ProgramSection() {
                 </p>
               </div>
             </div>
-            <a
+            {/* <a
               href="/register-iccp"
               className="flex-shrink-0 bg-red hover:bg-red/90 text-white px-7 py-3 rounded-[20px] font-semibold text-sm transition-all hover:scale-[1.02] whitespace-nowrap"
             >
               Daftar SCCP 2026
-            </a>
+            </a> */}
           </div>
         </FadeIn>
       </div>

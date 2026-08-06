@@ -21,7 +21,7 @@ const benefits = [
   },
 ];
 
-export const ICCPSection = () => {
+export const SCCPSection = () => {
   return (
     <section className="w-full bg-white py-24 px-6 md:px-12 lg:px-20 overflow-hidden">
       <div className="max-w-7xl mx-auto">

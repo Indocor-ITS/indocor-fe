@@ -31,13 +31,13 @@ export const CTASection = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 mt-2">
-          <Link
+          {/* <Link
             href="/register-iccp"
             className="group inline-flex items-center justify-center gap-2 bg-[#9D0808] hover:bg-red-800 text-white font-semibold py-3.5 px-8 rounded-[20px] transition-all hover:scale-[1.02]"
           >
             Daftar Sertifikasi SCCP
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-          </Link>
+          </Link> */}
           <Link
             href="/about"
             className="inline-flex items-center justify-center gap-2 border border-white/40 hover:border-white/70 text-white font-semibold py-3.5 px-8 rounded-[20px] transition-all hover:scale-[1.02]"
