@@ -14,30 +14,30 @@ export interface Event {
 }
 
 export const eventsData: Event[] = [
-  {
-    id: "ev-1",
-    slug: "iccp-2026",
-    title: "Student Corrosion Certification Program (SCCP) 2026",
-    date: "15 - 18 Agustus 2026",
-    location: "Gedung Robotika ITS & Zoom Meeting",
-    status: "upcoming",
-    image: "/images/landing-page/about.png", // Using existing placeholder
-    description:
-      "Program sertifikasi korosi tingkat nasional yang diadakan oleh INDOCOR ITS Student Chapter. Kegiatan ini bertujuan untuk mencetak inspektur korosi yang handal dan diakui secara profesional oleh industri.",
-    speakers: [
-      {
-        name: "Dr. Eng. Yanuardi",
-        role: "Head of INDOCOR National",
-        image: "/foto-dummy.webp",
-      },
-      {
-        name: "Prof. Sulistijono",
-        role: "Corrosion Expert ITS",
-        image: "/foto-dummy.webp",
-      },
-    ],
-    registrationLink: "/register-iccp",
-  },
+  //   {
+  //     id: "ev-1",
+  //     slug: "iccp-2026",
+  //     title: "Student Corrosion Certification Program (SCCP) 2026",
+  //     date: "15 - 18 Agustus 2026",
+  //     location: "Gedung Robotika ITS & Zoom Meeting",
+  //     status: "upcoming",
+  //     image: "/images/landing-page/about.png", // Using existing placeholder
+  //     description:
+  //       "Program sertifikasi korosi tingkat nasional yang diadakan oleh INDOCOR ITS Student Chapter. Kegiatan ini bertujuan untuk mencetak inspektur korosi yang handal dan diakui secara profesional oleh industri.",
+  //     speakers: [
+  //       {
+  //         name: "Dr. Eng. Yanuardi",
+  //         role: "Head of INDOCOR National",
+  //         image: "/foto-dummy.webp",
+  //       },
+  //       {
+  //         name: "Prof. Sulistijono",
+  //         role: "Corrosion Expert ITS",
+  //         image: "/foto-dummy.webp",
+  //       },
+  //     ],
+  //     registrationLink: "/register-iccp",
+  //   },
   {
     id: "ev-2",
     slug: "corrosion-week-2025",
