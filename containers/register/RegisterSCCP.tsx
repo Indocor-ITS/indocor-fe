@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
+import Link from "next/link";
 import { FadeIn } from "@/components/FadeIn";
 import {
   UploadCloud,
@@ -12,6 +13,9 @@ import {
   Gift,
   ChevronDown,
   BookOpen,
+  Hourglass,
+  CalendarClock,
+  ArrowRight,
 } from "lucide-react";
 
 const acara = {
@@ -410,6 +414,57 @@ export default function RegisterSCCP() {
                     </li>
                   ))}
                 </ul>
+
+                <h3 className="font-semibold text-gray-800 mt-6 mb-4 flex items-center gap-2">
+                  <Hourglass size={16} className="text-red" />
+                  Deadline Penting
+                </h3>
+                <div className="flex flex-col gap-3">
+                  <div className="border border-gray-100 rounded-lg p-4 hover:border-red/30 transition-colors bg-gray-50/40">
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="font-semibold text-sm text-gray-900 flex items-center gap-1.5">
+                        <Calendar size={13} className="text-red-600" />
+                        Open Registration
+                      </span>
+                      <span className="text-[11px] font-bold bg-red-600 text-white px-2.5 py-1 rounded-full tracking-wide uppercase">
+                        Wajib!
+                      </span>
+                    </div>
+                    <p className="text-xs font-semibold text-red-700 mb-0.5">
+                      16 September 2026 – 26 September 2026
+                    </p>
+                    <p className="text-xs text-gray-600 leading-relaxed">
+                      Batas akhir pengisian formulir pendaftaran &amp; upload
+                      semua berkas (Bukti Status, MoU, Bukti Bayar Termin 1).
+                    </p>
+                  </div>
+
+                  <div className="border border-gray-100 rounded-lg p-4 hover:border-amber-400/60 transition-colors bg-yellow-50/40">
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="font-semibold text-sm text-gray-900 flex items-center gap-1.5">
+                        <CalendarClock size={13} className="text-amber-600" />
+                        Pelunasan Termin 2
+                      </span>
+                      <span className="text-[11px] font-bold bg-amber-500 text-white px-2.5 py-1 rounded-full tracking-wide uppercase">
+                        Bertahap
+                      </span>
+                    </div>
+                    <p className="text-xs font-semibold text-amber-700 mb-0.5">
+                      30 September 2026 – 6 Oktober 2026
+                    </p>
+                    <p className="text-xs text-gray-600 leading-relaxed mb-3">
+                      Khusus peserta opsi pembayaran bertahap (Rp 1.000.000
+                      Termin 2).
+                    </p>
+                    <Link
+                      href="/register-sccp/pelunasan"
+                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold bg-amber-500 hover:bg-amber-600 text-white shadow-sm transition-all hover:shadow-md hover:scale-[1.02]"
+                    >
+                      <span>Buka Form Pelunasan Termin 2</span>
+                      <ArrowRight size={13} />
+                    </Link>
+                  </div>
+                </div>
 
                 <h3 className="font-semibold text-gray-800 mt-6 mb-4 flex items-center gap-2">
                   <MapPin size={16} className="text-red" />
