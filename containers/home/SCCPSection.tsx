@@ -79,7 +79,7 @@ export const SCCPSection = () => {
 
             {/* CTA */}
             <Link
-              href="/register-iccp"
+              href="/register-sccp"
               className="group inline-flex items-center gap-2 bg-[#9D0808] hover:bg-red-800 text-white font-semibold py-3.5 px-8 rounded-[20px] transition-all hover:scale-[1.02] shadow-md hover:shadow-lg"
             >
               Daftar Sertifikasi SCCP
