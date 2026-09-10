@@ -11,7 +11,7 @@ export const HomeContainer = () => {
       <Hero />
       <AboutPreview />
       <EventSection />
-      {/* <SCCPSection /> */}
+      <SCCPSection />
       <LatestArticles />
       <CTASection />
     </main>

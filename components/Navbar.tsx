@@ -87,14 +87,14 @@ export default function Navbar() {
           </nav>
 
           {/* CTA Button Desktop */}
-          {/* <div className="hidden md:flex items-center">
+          <div className="hidden md:flex items-center">
             <Link
-              href="/register-iccp"
+              href="/register-sccp"
               className="bg-[#9D0808] hover:bg-red-800 text-white px-6 py-2.5 rounded-[20px] font-medium text-[15px] transition-all hover:scale-[1.02]"
             >
               SCCP 2026
             </Link>
-          </div> */}
+          </div>
 
           {/* Mobile menu button */}
           <button
