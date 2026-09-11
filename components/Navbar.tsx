@@ -128,13 +128,13 @@ export default function Navbar() {
                   {link.name}
                 </Link>
               ))}
-              {/* <Link
-                href="/register-iccp"
+              <Link
+                href="/register-sccp"
                 onClick={() => setIsOpen(false)}
                 className="mt-4 w-full text-center bg-[#9D0808] hover:bg-red-800 text-white px-6 py-3 rounded-[20px] font-medium text-[15px] transition-colors"
               >
                 SCCP 2026
-              </Link> */}
+              </Link>
             </div>
           </motion.div>
         )}
