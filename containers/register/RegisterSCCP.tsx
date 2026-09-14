@@ -17,6 +17,7 @@ import {
   CalendarClock,
   ArrowRight,
 } from "lucide-react";
+import { validateBase64MaxMb } from "@/lib/utils";
 
 const acara = {
   deskripsi:
@@ -188,6 +189,18 @@ export default function RegisterSCCP() {
     }
     if (!buktiBayar.content) {
       setError("Upload bukti pembayaran terlebih dahulu.");
+      setIsLoading(false);
+      return;
+    }
+
+    // Pre-submit re-check ukuran file dari konten base64 (safety net,
+    // sama persis dengan validasi di API agar tidak ada submit gagal misterius)
+    const sizeError =
+      validateBase64MaxMb(buktiStatus.content, 5, "Bukti Status (PDF)") ||
+      validateBase64MaxMb(mou.content, 5, "MoU (PDF)") ||
+      validateBase64MaxMb(buktiBayar.content, 5, "Bukti Pembayaran (PNG/JPG)");
+    if (sizeError) {
+      setError(sizeError);
       setIsLoading(false);
       return;
     }

@@ -15,6 +15,7 @@ import {
   ExternalLink,
   ScrollText,
 } from "lucide-react";
+import { validateBase64MaxMb } from "@/lib/utils";
 
 /* ── Helpers ──────────────────────────────────────────────────── */
 
@@ -141,12 +142,17 @@ export default function RegisterSCCPPelunasan() {
 
     const ext = file.name.substring(file.name.lastIndexOf(".")).toLowerCase();
     if (![".png", ".jpg", ".jpeg"].includes(ext)) {
-      alert("Format file tidak didukung. Gunakan: .png / .jpg / .jpeg");
+      setError(
+        `Bukti Pelunasan: Format file tidak didukung (${ext || "tanpa ekstensi"}). Gunakan: .png / .jpg / .jpeg`,
+      );
       if (buktiPelunasanRef.current) buktiPelunasanRef.current.value = "";
       return;
     }
     if (file.size > 5 * 1024 * 1024) {
-      alert("Ukuran file terlalu besar. Maksimal 5MB.");
+      const actualMb = (file.size / (1024 * 1024)).toFixed(2);
+      setError(
+        `Bukti Pelunasan: Ukuran file ${actualMb}MB melebihi batas maksimal 5MB. Silakan kompres screenshot-nya lalu upload ulang.`,
+      );
       if (buktiPelunasanRef.current) buktiPelunasanRef.current.value = "";
       return;
     }
@@ -187,6 +193,19 @@ export default function RegisterSCCPPelunasan() {
     }
     if (!buktiPelunasan.content) {
       setError("Upload bukti pembayaran pelunasan terlebih dahulu.");
+      setIsLoading(false);
+      scrollToTopForm();
+      return;
+    }
+
+    // Pre-submit re-check ukuran file dari base64 (safety net, sama dengan API)
+    const sizeError = validateBase64MaxMb(
+      buktiPelunasan.content,
+      5,
+      "Bukti Pelunasan (PNG/JPG)",
+    );
+    if (sizeError) {
+      setError(sizeError);
       setIsLoading(false);
       scrollToTopForm();
       return;
