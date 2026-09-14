@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import supabase from "@/lib/db";
 import { uploadToSupabaseStorage } from "@/lib/sccp-helpers";
+import { validateBase64MaxMb } from "@/lib/utils";
 
 export async function POST(req: NextRequest) {
   try {
@@ -53,6 +54,36 @@ export async function POST(req: NextRequest) {
       return NextResponse.json(
         { error: "Opsi pembayaran hanya boleh 'lunas' atau 'bertahap'" },
         { status: 400 },
+      );
+    }
+
+    // Guard ukuran file (dihitung dari base64, sebelum upload ke Storage)
+    const sizeError =
+      validateBase64MaxMb(buktiStatusContent, 5, "Bukti Status (PDF)") ||
+      validateBase64MaxMb(mouContent, 5, "MoU (PDF)") ||
+      validateBase64MaxMb(buktiBayarContent, 5, "Bukti Pembayaran (PNG/JPG)");
+    if (sizeError) {
+      return NextResponse.json(
+        { error: sizeError, error_code: "FILE_TOO_LARGE" },
+        { status: 413 },
+      );
+    }
+
+    // Guard ekstensi file (antisipasi manipulasi dari luar form)
+    const extAllowed = (ext: unknown, allowed: string[]) =>
+      typeof ext === "string" && allowed.includes(ext.toLowerCase());
+    if (
+      !extAllowed(buktiStatusMimeType, [".pdf"]) ||
+      !extAllowed(mouMimeType, [".pdf"]) ||
+      !extAllowed(buktiBayarMimeType, [".png", ".jpg", ".jpeg"])
+    ) {
+      return NextResponse.json(
+        {
+          error:
+            "Format file tidak valid: Bukti Status & MoU wajib PDF, Bukti Pembayaran wajib PNG/JPG.",
+          error_code: "FILE_FORMAT_INVALID",
+        },
+        { status: 415 },
       );
     }
 

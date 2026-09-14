@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import supabase from "@/lib/db";
 import { uploadToSupabaseStorage } from "@/lib/sccp-helpers";
+import { validateBase64MaxMb } from "@/lib/utils";
 
 export async function POST(req: NextRequest) {
   try {
@@ -26,6 +27,31 @@ export async function POST(req: NextRequest) {
             "Field wajib diisi: namaLengkap, buktiPelunasanFileName, buktiPelunasanMimeType, buktiPelunasanContent",
         },
         { status: 400 },
+      );
+    }
+
+    // Guard ukuran + format file (dihitung dari base64, sebelum query & upload)
+    const sizeError = validateBase64MaxMb(
+      buktiPelunasanContent,
+      5,
+      "Bukti Pelunasan (PNG/JPG)",
+    );
+    if (sizeError) {
+      return NextResponse.json(
+        { error: sizeError, error_code: "FILE_TOO_LARGE" },
+        { status: 413 },
+      );
+    }
+    if (
+      typeof buktiPelunasanMimeType !== "string" ||
+      ![".png", ".jpg", ".jpeg"].includes(buktiPelunasanMimeType.toLowerCase())
+    ) {
+      return NextResponse.json(
+        {
+          error: "Format file tidak valid: Bukti Pelunasan wajib PNG/JPG.",
+          error_code: "FILE_FORMAT_INVALID",
+        },
+        { status: 415 },
       );
     }
 
